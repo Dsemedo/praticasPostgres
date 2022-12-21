@@ -1,11 +1,11 @@
 CREATE TABLE "states" (
 "id" SERIAL NOT NULL PRIMARY KEY,
-"name" VARCHAR(30) UNIQUE
+"name" VARCHAR(30) NOT NULL UNIQUE
 )
 
 CREATE TABLE "cities" (
 "id" SERIAL NOT NULL PRIMARY KEY,
-"name" VARCHAR(30) UNIQUE, 
+"name" VARCHAR(30) NOT NULL UNIQUE, 
 "stateId" INTEGER references states(id)
 )
 
